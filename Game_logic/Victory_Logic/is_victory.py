@@ -11,10 +11,14 @@ WINNING_LINES = [
 ]
 
 def is_victory(board, player: Literal["x",'o'])->bool:
+    won = False
     for combination in WINNING_LINES:
         for square_address in combination:
             if board[square_address] != player:
+                won = False               
                 break
-            return True
-    return False
+            won = True
+        if won == True:
+            return won
+    return won
 
