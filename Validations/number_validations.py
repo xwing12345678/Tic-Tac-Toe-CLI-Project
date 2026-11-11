@@ -1,4 +1,7 @@
+from .string_validations import is_non_empty_string
 def is_nonnegative_int_str(int_candidate:str)->bool:
+    if not is_non_empty_string(int_candidate):
+        return False
     return int_candidate.isdigit()
 
 def is_positive_int_str(int_candidate:str)->bool:
