@@ -1,5 +1,4 @@
 
-board_list:list[None|str] = [None,None,None,
-                        None,None,None,
-                        None,None,None]
-
+board_list:list[str] = ["","","",
+                        "","","",
+                        "","","x"]
