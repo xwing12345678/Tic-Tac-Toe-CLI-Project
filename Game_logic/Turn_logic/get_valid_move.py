@@ -5,7 +5,7 @@ from Display.display_board import display_board
 from typing import Sequence
 
 def get_valid_move(board:Sequence)->str:
-    move = ""
+    raw_choice = ""
     valid_move:bool = False
     valid_choices = get_valid_choices(board)
     while valid_move == False:
