@@ -1,0 +1,20 @@
+from typing import Literal
+WINNING_LINES = [
+(0, 1, 2),
+(3, 4, 5),
+(6, 7, 8),
+(0, 3, 6),
+(1, 4, 7),
+(2, 5, 8),
+(0, 4, 8),
+(2, 4, 6),
+]
+
+def is_victory(board, player: Literal["x",'o'])->bool:
+    for combination in WINNING_LINES:
+        for square_address in combination:
+            if board[square_address] != player:
+                break
+            return True
+    return False
+
